@@ -45,6 +45,16 @@ if (numeroLiteral == 1) {
 
 }
 
+// Caso tenha 'IF's encadeados estes serão indenpendentes
+
+if (1 == 1) {
+    console.log('1ª Primeiro IF');
+}
+
+if (1 == 1) {
+    console.log('2ª Segundo IF');
+}
+
 //Este 'IF' é diferente do 'IF' acima, pois o 'ELSE' anterior fechou o escopo dele
 
 if (numeroLiteral == 1) {
@@ -86,6 +96,10 @@ if (1 <= 1) {
     //Comparação de Menor ou Igual
 }
 
+if (1 != 1) {
+    //Diferende de 
+}
+
 //Comparadores (E)&& e (Ou) || 
 const maiorIdade = 18;
 const idadeUsuario = 15;
@@ -93,9 +107,18 @@ const podeDirigir = true;
 
 
 // Para Comparador '&&' todas as expressões precisam ser verdadeira para que o código dentro das chaves seja executado
+// Este IF é para Validar Cartao de Credito
 if (
-    (idadeUsuario >= maiorIdade)
-    &&
+    (idadeUsuario >= maiorIdade) &&
+    (podeDirigir == true) &&
+    (podeDirigir == true) &&
+    (podeDirigir == true) &&
+    (podeDirigir == true) &&
+    (podeDirigir == true) &&
+    (podeDirigir == true) &&
+    (podeDirigir == true) &&
+    (podeDirigir == true) &&
+    (podeDirigir == true) &&
     (podeDirigir == true)
 ) {
     console.log('Usuario pode Dirigir');
