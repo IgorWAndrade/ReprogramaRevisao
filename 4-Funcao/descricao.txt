@@ -1,0 +1,26 @@
+----------------------------------- Exercícios ----------------------------------- 
+
+01
+    Criar uma função que irá receber um nome digitado pelo usuario e irá imprimir a mensagem
+'Seja Bem-Vindo "nomeDaPessoa".
+
+
+02
+    Criar uma função que irá receber duas notas digitadas pelo usuario e irá imprimir a mensagem
+informando qual a maior nota digita entre as duas.
+
+
+03
+    03.01
+        Criar uma função que irá receber um número digitado pelo usuario e irá imprimir em ordem crescente
+    o número até 100. (OBS: Validar se número digitado é menor que 100 e impedir proseguir enquanto não for valor correto)
+
+    03.02
+        Criar uma função que irá receber um número digitado pelo usuario e irá imprimir em ordem decrescente
+    o número até 0. (OBS: Validar se número digitado é maior que 0 e impedir proseguir enquanto não for valor correto)
+
+
+04
+    Criar uma função que irá receber um salario e porcentagem de aumento e retorna o salario calculado com aumento. 
+Após isto criar uma nova função que irá receber salario calculado e data de inicio do aumento salario e irá imprimir uma mensagem
+amigavel sobre estas informações. 
