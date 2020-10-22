@@ -16,6 +16,7 @@ function retornarNumeroDigitadoPeloUsuario() {
 
 function validarNumeroDigitadoPeloUsuarioERetornarConvertido(numeroParametro) {
 
+
     let valorInvalido = true;
 
     do {
