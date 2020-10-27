@@ -19,4 +19,4 @@ function PessoaConstrutor(nome, idade, altura, peso, sexo) {
 
 console.log(new PessoaConstrutor('Igor', 26, 1.70, 65, 'M'));
 
-//module.exports = PessoaConstrutor;
+

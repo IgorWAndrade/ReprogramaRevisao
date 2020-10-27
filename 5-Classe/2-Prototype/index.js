@@ -7,6 +7,12 @@ function SerHumano() {
     this.ultimoNome = '';
 }
 
+// Criar Objeto
+var igor = new SerHumano();
+
+console.log('1ª ToString() - Sem Sobrescrever');
+igor.toString();
+
 // Sobrescrevendo um método
 
 Object.prototype.toString = function () {
@@ -17,9 +23,9 @@ Object.prototype.toString = function () {
         `);
 }
 
-var igor = new SerHumano();
 igor.primerioNome = 'Igor';
 igor.ultimoNome = 'Andrade';
+console.log('2ª ToString() - Com Sobrescrita\n');
 igor.toString();
 
 // Adicionando nova propriedade 
@@ -37,4 +43,5 @@ Object.prototype.toString = function () {
 }
 
 igor.meioNome = 'Wellington';
+console.log('3ª ToString() - Com Sobrescrita com nova Propriedade\n');
 igor.toString();

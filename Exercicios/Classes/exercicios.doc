@@ -1,0 +1,37 @@
+DICA:
+    Não se esqueça de usar Construtor
+    (Não precisa de utilizar Prototype, Heranca ou Module nestes abaixo)
+
+
+1 - 
+    Crie uma classe do tipo Pessoa que possua as seguintes propriedades Nome, Idade, Altura e Peso. Crie uma método
+para calcular o IMC da Pessoa. Atenção este não deve retornar nenhuma informação apenas calcular o IMC e após isto
+crie um método que irá receber um valor e retorno o Status do IMC desta pessoa.
+
+2 - 
+    Crie uma classe do tipo Curso que possua as seguintes propriedades Nome e Duração. 
+Crie um método para pedir ao usuario para digitar um curso com nome e duração.
+
+    Crie uma classe do tipo Pessoa que possua as seguintes propriedades Nome, Idade e Curso. 
+Crie um método para pedir ao usuario para digitar informações da Pessoa com nome ,idade e Curso.
+Crie um método para validar se existe este curso digitado pelo usuario disponivel "Caso tenha informar que existe e duração"
+
+3 -
+    Crie uma classe do tipo Pessoa que possua as seguintes propriedades Nome e Data de Nascimento. 
+Crie um método para informar qual a idade da pessoa.
+
+4 -
+    Crie uma classe do tipo Pessoa que possua as seguintes propriedades Nome e Idade. 
+Crie um método para informar qual o ano que a pessoa nasceu.
+
+5 - 
+    Crie uma classe Pessoa que possua as seguintes propriedades Nome.
+    Crie uma classe Agenda que possua as seguintes propriedades Array Pessoa (OBS: Máximo 10 Pessoa)
+Crie um metodo para Adicionar Pessoa
+Crie um metodo para Remover Pessoa por Nome
+Crie um metodo para Imprimir as Pessoas da Agenda
+
+
+DICA:
+    Utilizar Prototype, Heranca ou Module nestes abaixo
+

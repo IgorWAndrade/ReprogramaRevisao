@@ -27,17 +27,17 @@ console.log(estudanteSemHerdar instanceof Estudante); // true
 Estudante.prototype = new Pessoa();
 
 // Criar um objeto de Estudante
-var estudanteComHerdar = new Estudante();
+var estudanteComHeranca = new Estudante();
 
 // Verificar a herança
 console.log("\n\nValidações de Herança")
 
-console.log(estudanteComHerdar instanceof Pessoa); // true 
-console.log(estudanteComHerdar instanceof Estudante); // true
+console.log(estudanteComHeranca instanceof Pessoa); // true 
+console.log(estudanteComHeranca instanceof Estudante); // true
 
 // Executar metodos dos objetos
-estudanteComHerdar.saudacao();
-estudanteComHerdar.despedida();
+estudanteComHeranca.saudacao();
+estudanteComHeranca.despedida();
 
 // Sobrescrever um metodo vindo do pai ao herdar
 Estudante.prototype.saudacao = function () {
@@ -47,5 +47,5 @@ Estudante.prototype.saudacao = function () {
 // Executar metodos dos objetos
 console.log('\n');
 
-estudanteComHerdar.saudacao();
-estudanteComHerdar.despedida();
+estudanteComHeranca.saudacao();
+estudanteComHeranca.despedida();
