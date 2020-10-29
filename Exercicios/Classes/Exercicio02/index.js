@@ -1,62 +1,118 @@
 /*
-2 -
+2 - 
 Crie uma classe do tipo Curso que possua as seguintes propriedades Nome e Duração.
     Crie um método para pedir ao usuario para digitar um curso com nome e duração.
     Crie um método para validar se existe este curso digitado pelo usuario disponivel "Caso tenha informar que existe e duração"
 */
 const readLine = require('readline-sync');
 
-
 class Curso {
     static Cursos = [];
+    Nome = '';
+    Duracao = 0;
+
+    //CRUD
+    // C = Create
+    // R = Read
+    // U = Update
+    // D = Delete
 
     constructor(nome, duracao) {
         this.Nome = nome;
         this.Duracao = duracao;
     }
 
+    static Criar = () => {
+        let nome = readLine.question("Digite o nome do Curso: ");
+        let duracao = readLine.questionInt("Digite a duracao do Curso: ");
 
-    static CriarCurso = (nome, duracao) => {
         return new Curso(nome, duracao);
     }
 
-    static BuscarCurso = (nome) => {
-        let existeCurso = false;
+    static Atualizar = (nome) => {
+
+    }
+
+    static RemoverPorNome = (nome) => {
+        let curso = Curso.BuscarPorNome(nome);
+
+        if (curso != null) {
+            console.log(curso);
+
+            Curso.Cursos.splice(Curso.Cursos.indexOf(curso), 1);
+        }
+    }
+
+    static Listar = () => {
+        console.log("\nLista de Cursos Cadastrados\n");
+        for (let i = 0; i < Curso.Cursos.length; i++) {
+            console.log(`Curso: ${Curso.Cursos[i].Nome} -- Duracao: ${Curso.Cursos[i].Duracao}`);
+        }
+        console.log("\nEncerrando o Projeto\n");
+    }
+
+    static BuscarPorNome = (nome) => {
+        let curso = null;
 
         for (let i = 0; i < Curso.Cursos.length; i++) {
             if (Curso.Cursos[i].Nome == nome) {
-                existeCurso = true;
+                curso = Curso.Cursos[i];
             }
         }
 
-        return existeCurso;
+        return curso;
     }
 }
 
+
+let encerrarExecucao = false;
 do {
 
-    do {
-        let nome = readLine.question('Digite um nome de um curso: ');
-        let duracao = readLine.questionInt('Digite a duracao de um curso: ');
+    let opcao = OpcoesParaExecucao();
+    if (opcao == 1) {
+        Curso.Listar();
 
-        Curso.Cursos.push(Curso.CriarCurso(nome, duracao));
+    } else if (opcao == 2) {
+        let curso = Curso.Criar();
+        Curso.Cursos.push(curso);
 
-    } while (readLine.questionInt('Para continuar a criação de cursos digite "0"\n') == 0);
 
-    do {
-        let nome = readLine.question('Digite um nome de um curso para buscar: ');
+    } else if (opcao == 3) {
+        //EXERCICIO PARA FAZER
 
-        let existe = Curso.BuscarCurso(nome);
+        Curso.Atualizar();
 
-        if (existe == true) {
-            console.log(`O Curso ${nome} informado existe em nossa base de dados.`);
+
+    } else if (opcao == 4) {
+
+        let nome = readLine.question("Digite o nome do curso para remover: ");
+        Curso.RemoverPorNome(nome);
+    } else if (opcao == 5) {
+
+        let nome = readLine.question("Digite o nome do curso para procurar na Lista: ");
+        let curso = Curso.BuscarPorNome(nome);
+
+        if (curso == null) {
+            console.log(`O Curso ${nome} não existe`);
         } else {
-            console.log(`O Curso ${nome} informado não existe em nossa base de dados.`);
+            console.log(curso);
         }
+    } else {
 
-    } while (readLine.questionInt('Para continuar a busca de cursos digite "0"\n') == 0);
+        encerrarExecucao = true;
+    }
 
 
-} while (readLine.questionInt('Para encerrar digita "0"\n') == 0)
+} while (encerrarExecucao == false)
 
-
+function OpcoesParaExecucao() {
+    return readLine.questionInt(
+        `
+        Para Listar Todos os Cursos digite = "1"
+        Para Criar um novo Curso digite = "2"
+        Para Atualizar um Curso digite = "3"
+        Para Remover um Curso digite = "4"
+        Para Procurar um Curso na Lista digite = "5"
+        Para Encerrar digite = "0"\n
+        `);
+}
