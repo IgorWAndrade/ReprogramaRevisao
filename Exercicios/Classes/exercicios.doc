@@ -9,12 +9,9 @@ para calcular o IMC da Pessoa. Atenção este não deve retornar nenhuma informa
 crie um método que irá receber um valor e retorno o Status do IMC desta pessoa.
 
 2 - 
-    Crie uma classe do tipo Curso que possua as seguintes propriedades Nome e Duração. 
-Crie um método para pedir ao usuario para digitar um curso com nome e duração.
-
-    Crie uma classe do tipo Pessoa que possua as seguintes propriedades Nome, Idade e Curso. 
-Crie um método para pedir ao usuario para digitar informações da Pessoa com nome ,idade e Curso.
-Crie um método para validar se existe este curso digitado pelo usuario disponivel "Caso tenha informar que existe e duração"
+Crie uma classe do tipo Curso que possua as seguintes propriedades Nome e Duração.
+    Crie um método para pedir ao usuario para digitar um curso com nome e duração.
+    Crie um método para validar se existe este curso digitado pelo usuario disponivel "Caso tenha informar que existe e duração"
 
 3 -
     Crie uma classe do tipo Pessoa que possua as seguintes propriedades Nome e Data de Nascimento. 
